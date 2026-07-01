@@ -1,0 +1,49 @@
+{
+  "name": "@nebutra/fonts",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Self-hosted OSS font registry — build-time next/font faces + a name→CSS-var resolver so theme / DESIGN.md fonts render with zero runtime external requests",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nebutra/fonts.git"
+  },
+  "files": [
+    "src/index.ts",
+    "src/next.ts"
+  ],
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./next": "./src/next.ts"
+  },
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.4"
+  },
+  "peerDependencies": {
+    "next": ">=15",
+    "react": "^19"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/Nebutra/fonts#readme",
+  "bugs": {
+    "url": "https://github.com/Nebutra/fonts/issues"
+  },
+  "nebutraMirror": {
+    "sourceRepository": "Nebutra/Nebutra-Sailor",
+    "sourceDirectory": "packages/design/fonts",
+    "sourcePackage": "@nebutra/fonts",
+    "sourceSha": "50022c4f2966bbe11b4a269d1e6719d2bbb9746a",
+    "canonicalSource": "monorepo"
+  }
+}
