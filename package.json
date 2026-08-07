@@ -1,0 +1,93 @@
+{
+  "name": "@nebutra/fonts",
+  "version": "0.1.1",
+  "type": "module",
+  "description": "Self-hosted OSS font registry — build-time next/font faces + a name→CSS-var resolver so theme / DESIGN.md fonts render with zero runtime external requests",
+  "private": false,
+  "nebutra": {
+    "status": "wip",
+    "productionReady": false,
+    "surface": "support-contract",
+    "featureId": "fonts",
+    "category": "design",
+    "summary": "Self-hosted OSS font registry for next/font + CSS-var resolution",
+    "gaps": [
+      "First intentional public publish not yet cut — workspace-only until release surface includes fonts"
+    ]
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nebutra/fonts.git"
+  },
+  "files": [
+    "dist",
+    "generated/vivo-sans-cn.css",
+    "generated/subset-manifest.json",
+    "generated/*.woff2",
+    "vendor/vivo-sans/LICENCE-vivo-Sans.txt",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./next": {
+      "types": "./src/next.ts",
+      "import": "./src/next.ts",
+      "default": "./src/next.ts"
+    },
+    "./next/cjk": {
+      "types": "./src/next-cjk.ts",
+      "import": "./src/next-cjk.ts",
+      "default": "./src/next-cjk.ts"
+    },
+    "./cjk": {
+      "types": "./dist/generated/index.d.ts",
+      "import": "./dist/generated/index.js",
+      "default": "./dist/generated/index.js"
+    },
+    "./cjk.css": "./generated/vivo-sans-cn.css",
+    "./generated/*": "./generated/*"
+  },
+  "scripts": {
+    "subset:cjk": "node scripts/subset-cjk.mjs",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "build": "tsup"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "typescript": "^5.9.3",
+    "vitest": "^4.1.4",
+    "tsup": "^8.5.1",
+    "jsdom": "^29.1.1",
+    "react": "^19",
+    "@types/node": "^22.10.0"
+  },
+  "peerDependencies": {
+    "next": ">=15",
+    "react": "^19"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "homepage": "https://github.com/Nebutra/fonts#readme",
+  "bugs": {
+    "url": "https://github.com/Nebutra/fonts/issues"
+  },
+  "nebutraMirror": {
+    "sourceRepository": "Nebutra/Nebutra-Sailor",
+    "sourceDirectory": "packages/design/fonts",
+    "sourcePackage": "@nebutra/fonts",
+    "sourceSha": "de6f494fa3b75031fc1d4762fa52a7a8dacff1c3",
+    "canonicalSource": "monorepo"
+  },
+  "packageManager": "pnpm@10.32.1"
+}
