@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "outDir": "dist",
+    "skipLibCheck": true
+  },
+  "include": [
+    "src",
+    "generated"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
